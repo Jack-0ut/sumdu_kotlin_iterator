@@ -1,85 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:background="#455A64"
-    android:padding="16dp">
-
-    <TextView
-        android:id="@+id/title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Iterate through array"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="32dp"/>
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#455A64"
+        android:padding="16dp">
 
-        <EditText
-            android:id="@+id/start_value"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:hint="Start value"
-            android:textColorHint="#B3FFFFFF"
+            android:text="Iterate through array"
+            android:textSize="24sp"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginBottom="32dp"/>
 
-        <EditText
-            android:id="@+id/end_value"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:hint="End value"
-            android:textColorHint="#B3FFFFFF"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/start_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:hint="Start value"
+                android:textColorHint="#B3FFFFFF"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginRight="8dp"/>
+
+            <EditText
+                android:id="@+id/end_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:hint="End value"
+                android:textColorHint="#B3FFFFFF"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+        <SeekBar
+            android:id="@+id/delaySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:max="5000"
+            android:progress="1000" />
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i = 0"
+            android:textSize="48sp"
+            android:textColor="#FFC107"
+            android:background="#263238"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/hashcode_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hashCode:"
+            android:textSize="24sp"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#FFFFFF"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginBottom="16dp"/>
+
     </LinearLayout>
-    <SeekBar
-        android:id="@+id/delaySeekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:max="5000"
-        android:progress="1000" />
-
-    <Button
-        android:id="@+id/start_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"/>
-
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="i = 0"
-        android:textSize="48sp"
-        android:textColor="#FFC107"
-        android:background="#263238"
-        android:padding="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:id="@+id/hashcode_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hashCode:"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
-
-</LinearLayout>
+</ScrollView>
